@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
-
-type T struct {
-	x int
-}
-
-func (t T) String() string { return "boo" }
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/zsais/go-gin-prometheus"
+)
 
 func main() {
-	t := T{123}
-	fmt.Printf("%v\n", t)
-	fmt.Printf("%#v\n", t)
-	fmt.Printf("%+v\n", t)
+	r := gin.New()
+
+	p := ginprometheus.NewPrometheus("gin")
+	p.Use(r)
+
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, "Hello world!")
+	})
+
+	r.Run(":29090")
 }
