@@ -3,6 +3,7 @@ package objects
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 )
 
@@ -17,9 +18,11 @@ func NewPutStream(server, object string) *PutStream {
 	go func() {
 		fmt.Println("NewPutStream:", "http://"+server+"/objects/"+object)
 		request, _ := http.NewRequest("PUT", "http://"+server+"/objects/"+object, reader)
+		n, e := ioutil.ReadAll(reader)
+		fmt.Println("reader:", string(n), e)
 		client := http.Client{}
 		r, e := client.Do(request)
-		fmt.Println(r, e)
+		fmt.Println("r:", r, "e:", e)
 		if e != nil && r.StatusCode != http.StatusOK {
 			e = fmt.Errorf("dataServer return http code %d", r.StatusCode)
 		}
@@ -40,7 +43,7 @@ type GetStream struct {
 	reader io.Reader
 }
 
-func newGetStream(url string) (*GetStream, error)  {
+func newGetStream(url string) (*GetStream, error) {
 	r, e := http.Get(url)
 	if e != nil {
 		return nil, e
@@ -51,12 +54,12 @@ func newGetStream(url string) (*GetStream, error)  {
 	return &GetStream{r.Body}, nil
 }
 
-func NewGetStream(server, object string) (*GetStream, error)  {
+func NewGetStream(server, object string) (*GetStream, error) {
 	if server == "" || object == "" {
 		return nil, fmt.Errorf("invalid server %s object %s", server, object)
 	}
 	return newGetStream("http://" + server + "/objects/" + object)
 }
-func (r *GetStream) Read(p []byte) (n int, err error)  {
+func (r *GetStream) Read(p []byte) (n int, err error) {
 	return r.reader.Read(p)
 }

@@ -1,6 +1,7 @@
 package objects
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -23,6 +24,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 func put(w http.ResponseWriter, r *http.Request) {
 	path := os.Getenv("STORAGE_ROOT") + "/" +
 		strings.Split(r.URL.EscapedPath(), "/")[2]
+	fmt.Println("data put path:", path)
 	f, e := os.Create(path)
 	if e != nil {
 		log.Println(e)
