@@ -1,17 +1,17 @@
 
 GOPATH:=$(shell go env GOPATH)
-.PHONY: init
-init:
-	go get -u github.com/golang/protobuf/proto
-	go get -u github.com/golang/protobuf/protoc-gen-go
-	go get github.com/micro/micro/v3/cmd/protoc-gen-micro
+MODIFY=Mproto/imports/api.proto=github.com/micro/go-micro/v2/api/proto
+
 .PHONY: proto
 proto:
-	protoc --proto_path=. --micro_out=. --go_out=:. proto/helloworld.proto
-	
+    
+	protoc --proto_path=. --micro_out=${MODIFY}:. --go_out=${MODIFY}:. proto/helloworld/helloworld.proto
+    
+
 .PHONY: build
-build:
-	go build -o helloworld *.go
+build: proto
+
+	go build -o helloworld-service *.go
 
 .PHONY: test
 test:
@@ -19,4 +19,4 @@ test:
 
 .PHONY: docker
 docker:
-	docker build . -t helloworld:latest
+	docker build . -t helloworld-service:latest

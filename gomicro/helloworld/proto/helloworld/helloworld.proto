@@ -1,8 +1,6 @@
 syntax = "proto3";
 
-package helloworld;
-
-option go_package = "proto;helloworld";
+package go.micro.service.helloworld;
 
 service Helloworld {
 	rpc Call(Request) returns (Response) {}

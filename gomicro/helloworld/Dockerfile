@@ -1,3 +1,3 @@
 FROM alpine
-ADD helloworld /helloworld
-ENTRYPOINT [ "/helloworld" ]
+ADD helloworld-service /helloworld-service
+ENTRYPOINT [ "/helloworld-service" ]

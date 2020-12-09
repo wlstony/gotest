@@ -1,25 +1,32 @@
 package main
 
 import (
+	log "github.com/micro/go-micro/v2/logger"
+	"github.com/micro/go-micro/v2"
 	"helloworld/handler"
-	pb "helloworld/proto"
+	"helloworld/subscriber"
 
-	"github.com/micro/micro/v3/service"
-	"github.com/micro/micro/v3/service/logger"
+	helloworld "helloworld/proto/helloworld"
 )
 
 func main() {
-	// Create service
-	srv := service.New(
-		service.Name("helloworld"),
-		service.Version("latest"),
+	// New Service
+	service := micro.NewService(
+		micro.Name("go.micro.service.helloworld"),
+		micro.Version("latest"),
 	)
 
-	// Register handler
-	pb.RegisterHelloworldHandler(srv.Server(), new(handler.Helloworld))
+	// Initialise service
+	service.Init()
+
+	// Register Handler
+	helloworld.RegisterHelloworldHandler(service.Server(), new(handler.Helloworld))
+
+	// Register Struct as Subscriber
+	micro.RegisterSubscriber("go.micro.service.helloworld", service.Server(), new(subscriber.Helloworld))
 
 	// Run service
-	if err := srv.Run(); err != nil {
-		logger.Fatal(err)
+	if err := service.Run(); err != nil {
+		log.Fatal(err)
 	}
 }
