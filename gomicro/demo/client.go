@@ -5,10 +5,21 @@ import (
 	proto "demo/proto/demo"
 	"fmt"
 	"github.com/micro/go-micro/v2"
+	"github.com/micro/go-plugins/registry/consul/v2"
 )
 
 func main() {
-	service := micro.NewService(micro.Name("demo"))
+
+	registry := consul.NewRegistry()
+
+	service := micro.NewService(
+		micro.Name("demo1"),
+		micro.Registry(registry),
+		//micro.Broker(broker),
+		//micro.Transport(transport),
+	)
+
+	//service := micro.NewService(micro.Name("demo"))
 	service.Init()
 
 	greeter := proto.NewGreeterService("demo", service.Client())
