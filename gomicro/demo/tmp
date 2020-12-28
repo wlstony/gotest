@@ -1,0 +1,1297 @@
+execve("/home/wuls/Downloads/go1.14.3.linux-amd64/go/bin/go", ["go", "get", "-v", "github.com/srikrsna/protoc-gen-g"...], 0x7fff7f9fa858 /* 73 vars */) = 0
+brk(NULL)                               = 0x23a4000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/haswell/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/haswell/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "haswell/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "haswell/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/haswell/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/haswell/x86_64", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/haswell/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/haswell", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/haswell/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/haswell/x86_64", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/haswell/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/haswell", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64", 0x7ffebf1762e0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=116080, ...}) = 0
+mmap(NULL, 116080, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f294ad1a000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000b\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=144976, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294ad18000
+mmap(NULL, 2221184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f294a8f1000
+mprotect(0x7f294a90b000, 2093056, PROT_NONE) = 0
+mmap(0x7f294ab0a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f294ab0a000
+mmap(0x7f294ab0c000, 13440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f294ab0c000
+close(3)                                = 0
+openat(AT_FDCWD, "tls/haswell/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/haswell/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "haswell/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "haswell/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f294a500000
+mprotect(0x7f294a6e7000, 2097152, PROT_NONE) = 0
+mmap(0x7f294a8e7000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f294a8e7000
+mmap(0x7f294a8ed000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f294a8ed000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294ad15000
+arch_prctl(ARCH_SET_FS, 0x7f294ad15740) = 0
+mprotect(0x7f294a8e7000, 16384, PROT_READ) = 0
+mprotect(0x7f294ab0a000, 4096, PROT_READ) = 0
+mprotect(0x7f294ad37000, 4096, PROT_READ) = 0
+munmap(0x7f294ad1a000, 116080)          = 0
+set_tid_address(0x7f294ad15a10)         = 19146
+set_robust_list(0x7f294ad15a20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f294a8f6cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f294a8f6d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x23a4000
+brk(0x23c5000)                          = 0x23c5000
+sched_getaffinity(0, 8192, [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+openat(AT_FDCWD, "/sys/kernel/mm/transparent_hugepage/hpage_pmd_size", O_RDONLY) = 3
+read(3, "2097152\n", 20)                = 8
+close(3)                                = 0
+uname({sysname="Linux", nodename="wuls", ...}) = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294acd5000
+mmap(NULL, 131072, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294acb5000
+mmap(NULL, 1048576, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294abb5000
+mmap(NULL, 8388608, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2949d00000
+mmap(NULL, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2945d00000
+mmap(NULL, 536870912, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2925d00000
+mmap(0xc000000000, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+mmap(0xc000000000, 67108864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+mmap(NULL, 33554432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2923d00000
+mmap(NULL, 2164744, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2923aef000
+mmap(0x7f294acb5000, 131072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f294acb5000
+mmap(0x7f294ac35000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f294ac35000
+mmap(0x7f294a106000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f294a106000
+mmap(0x7f2947d30000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2947d30000
+mmap(0x7f2935e80000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2935e80000
+mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f29239ef000
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294ad27000
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f294aba5000
+mlock(0xc000009000, 4096)               = 0
+rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+sigaltstack({ss_sp=0xc000002000, ss_flags=0, ss_size=32768}, NULL) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+gettid()                                = 19146
+mlock(0xc000059000, 4096)               = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTRAP, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR2, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTKFLT, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGURG, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXCPU, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGVTALRM, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPROF, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGIO, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPWR, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSYS, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRTMIN, NULL, {sa_handler=0x7f294a8f6cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, 8) = 0
+rt_sigaction(SIGRTMIN, NULL, {sa_handler=0x7f294a8f6cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, 8) = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f294a8f6cb0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, NULL, {sa_handler=0x7f294a8f6d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, 8) = 0
+rt_sigaction(SIGRT_1, NULL, {sa_handler=0x7f294a8f6d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f294a8f6d50, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_2, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_3, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_4, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_5, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_6, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_7, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_8, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_9, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_10, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_11, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_12, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_13, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_14, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_15, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_16, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_17, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_18, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_19, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_20, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_21, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_22, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_23, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_24, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_25, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_26, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_27, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_28, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_29, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_30, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_31, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_32, {sa_handler=0x4666c0, sa_mask=~[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f294a9038a0}, NULL, 8) = 0
+mlock(0xc00006b000, 4096)               = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f29231ee000
+mprotect(0x7f29231ef000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f29239edfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f29239ee9d0, tls=0x7f29239ee700, child_tidptr=0x7f29239ee9d0) = 19147
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mlock(0xc000073000, 4096)               = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f29229ed000
+mprotect(0x7f29229ee000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f29231ecfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f29231ed9d0, tls=0x7f29231ed700, child_tidptr=0x7f29231ed9d0) = 19148
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 15513696
+futex(0xc000080148, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xc000080148, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xc000050848, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+mlock(0xc000117000, 4096)               = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f29211ea000
+mprotect(0x7f29211eb000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f29219e9fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f29219ea9d0, tls=0x7f29219ea700, child_tidptr=0x7f29219ea9d0) = 19151
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+readlinkat(AT_FDCWD, "/proc/self/exe", "/home/wuls/Downloads/go1.14.3.li"..., 128) = 51
+fcntl(0, F_GETFL)                       = 0x8002 (flags O_RDWR|O_LARGEFILE)
+futex(0xc000100148, FUTEX_WAKE_PRIVATE, 1) = 1
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f29211aa000
+fcntl(1, F_GETFL)                       = 0x8002 (flags O_RDWR|O_LARGEFILE)
+fcntl(2, F_GETFL)                       = 0x8002 (flags O_RDWR|O_LARGEFILE)
+openat(AT_FDCWD, "/home/wuls/.config/go/env", O_RDONLY|O_CLOEXEC) = 3
+epoll_create1(EPOLL_CLOEXEC)            = 4
+pipe2([5, 6], O_NONBLOCK|O_CLOEXEC)     = 0
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN, {u32=15685288, u64=15685288}}) = 0
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc00005a794) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=59, ...}) = 0
+read(3, "GOPRIVATE=gitlab.2345.cn\nGOPROXY"..., 571) = 59
+read(3, "", 512)                        = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/tool", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/local/go", 0xc00011cfa8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.config/composer/vendor/bin/gccgo", 0xc0001a0038, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/bin/gccgo", 0xc0001a0108, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/php-7.4.5/bin/gccgo", 0xc0001a01d8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/gccgo", 0xc0001a02a8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/gccgo", 0xc0001a0378, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/gccgo", 0xc0001a0448, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/gccgo", 0xc0001a0518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/gccgo", 0xc0001a05e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/gccgo", 0xc0001a06b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/games/gccgo", 0xc0001a0788, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/games/gccgo", 0xc0001a0858, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/snap/bin/gccgo", 0xc0001a0928, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/valgrind-3.15.0/bin/gccgo", 0xc0001a09f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/go/bin/gccgo", 0xc0001a0ac8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/.local/bin/gccgo", 0xc0001a0b98, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo/go.mod", {st_mode=S_IFREG|0664, st_size=367, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/opt", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=24576, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+getpid()                                = 19146
+mkdirat(AT_FDCWD, "/tmp/go-build452253565", 0700) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo/go.mod", {st_mode=S_IFREG|0664, st_size=367, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/opt", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=24576, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/README", {st_mode=S_IFREG|0664, st_size=170, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/00", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/01", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/02", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/03", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/04", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/05", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/06", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/07", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/08", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/09", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0a", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0b", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0c", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0e", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/0f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/10", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/11", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/12", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/13", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/14", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/15", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/16", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/17", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/18", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/19", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1a", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1b", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1c", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1d", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1e", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/1f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/20", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/21", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/22", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/23", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/24", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/25", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/26", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/27", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/28", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/29", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2a", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2b", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/2f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/30", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/31", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/32", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/33", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/34", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/35", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/36", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/37", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/38", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/39", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3a", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3b", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3c", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/3f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/40", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/41", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/42", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/43", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/44", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/45", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/46", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/47", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/48", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/49", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4a", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4b", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4c", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/4f", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/50", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/51", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/52", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/53", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/54", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/55", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/56", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/57", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/58", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/59", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5a", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5b", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5d", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5e", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/5f", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/60", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/61", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/62", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/63", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/64", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/65", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/66", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/67", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/68", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/69", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6a", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6b", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/6f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/70", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/71", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/72", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/73", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/74", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/75", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/76", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/77", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/78", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/79", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7a", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7b", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7d", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/7f", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/80", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/81", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/82", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/83", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/84", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/85", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/86", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/87", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/88", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/89", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8a", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8b", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8d", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8e", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/8f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/90", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/91", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/92", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/93", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/94", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/95", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/96", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/97", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/98", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/99", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9a", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9b", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9c", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9d", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9e", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/9f", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a0", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a1", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a2", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a3", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a4", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a5", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a6", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a7", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a8", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/a9", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/aa", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ab", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ac", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ad", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ae", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/af", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b0", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b1", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b2", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b3", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b4", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b5", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b6", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b7", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b8", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/b9", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ba", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/bb", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/bc", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/bd", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/be", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/bf", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c0", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c1", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c2", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c3", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c4", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c5", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c6", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c7", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c8", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/c9", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ca", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/cb", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/cc", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/cd", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ce", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/cf", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d0", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d1", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d2", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d3", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d4", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d5", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d6", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d7", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d8", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/d9", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/da", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/db", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/dc", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/dd", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/de", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/df", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e0", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e1", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e2", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e3", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e4", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e5", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e6", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e7", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e8", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/e9", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ea", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/eb", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ec", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ed", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ee", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ef", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f0", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f1", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f2", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f3", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f4", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f5", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f6", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f7", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f8", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/f9", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/fa", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/fb", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/fc", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/fd", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/fe", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/.cache/go-build/ff", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go.mod", 0xc0001e6ac8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/src/mod", 0xc0001e6b98, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/opt/case/gotest/gomicro/demo/go.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001d29d4) = -1 EPERM (Operation not permitted)
+flock(3, LOCK_SH)                       = 0
+read(3, "module demo\n\ngo 1.14\n\nreplace go"..., 512) = 367
+read(3, "", 1169)                       = 0
+flock(3, LOCK_UN)                       = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/opt", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/opt/case/gotest/gomicro/demo", {st_mode=S_IFDIR|0775, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+futex(0xc000080148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/mwitkow/go-proto-validators/@v/v0.3.2.mod", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0001f39b4) = -1 EPERM (Operation not permitted)
+fstat(8, {st_mode=S_IFREG|0664, st_size=172, ...}) = 0
+read(8, "module github.com/mwitkow/go-pro"..., 684) = 172
+read(8, "", 512)                        = 0
+close(8)                                = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+futex(0xc000280148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/google/go-cmp/@v/v0.5.0.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0000a559c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=105, ...}) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 15177368
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 15177368
+read(3, "module github.com/google/go-cmp\n"..., 617) = 105
+read(3, "", 512)                        = 0
+close(3)                                = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xc0002804c8, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xc0002804c8, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 1
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/go.etcd.io/bbolt/@v/v1.3.4.mod", O_RDONLY|O_CLOEXEC) = 8
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 139814668005376
+futex(0xee2d40, FUTEX_WAKE_PRIVATE, 1)  = 1
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+getpid()                                = 19146
+tgkill(19146, 19152, SIGURG)            = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/grpc-ecosystem/go-grpc-middleware/@v/v1.1.0.mod", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc00005b59c) = -1 EPERM (Operation not permitted)
+fstat(8, {st_mode=S_IFREG|0664, st_size=613, ...}) = 0
+read(8, "module github.com/grpc-ecosystem"..., 1125) = 613
+read(8, "", 512)                        = 0
+close(8)                                = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 10342240
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/marten-seemann/chacha20/@v/v0.2.0.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+madvise(0xc000400000, 2097152, MADV_NOHUGEPAGE) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+madvise(0xc0005ac000, 8192, MADV_FREE)  = 0
+futex(0xee2d40, FUTEX_WAKE_PRIVATE, 1)  = 1
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0001d359c) = -1 EPERM (Operation not permitted)
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+fstat(8, {st_mode=S_IFREG|0664, st_size=24, ...}) = 0
+read(8, "module golang.org/x/net\n", 536) = 24
+read(8, "", 512)                        = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/go-errors/errors/@v/v1.0.1.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001d359c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=35, ...}) = 0
+read(3, "module github.com/go-errors/erro"..., 547) = 35
+read(3, "", 512)                        = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/golang.org/x/sync/@v/v0.0.0-20181221193216-37e7f081c4d4.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001d359c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=25, ...}) = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+getpid()                                = 19146
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 19146
+tgkill(19146, 19152, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19150, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19148, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19148, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19148, SIGURG)            = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/gopkg.in/h2non/gock.v1/@v/v1.0.15.mod", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0000a559c) = -1 EPERM (Operation not permitted)
+fstat(7, {st_mode=S_IFREG|0664, st_size=157, ...}) = 0
+read(7, "module gopkg.in/h2non/gock.v1\n\nr"..., 669) = 157
+read(7, "", 512)                        = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/urfave/cli/@v/v1.22.1.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0000a559c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=180, ...}) = 0
+read(3, "module github.com/urfave/cli\n\ngo"..., 692) = 180
+read(3, "", 512)                        = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/coreos/go-systemd/@v/v0.0.0-20190719114852-fd7a80b32e1f.mod", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0000a559c) = -1 EPERM (Operation not permitted)
+fstat(8, {st_mode=S_IFREG|0664, st_size=36, ...}) = 0
+read(8, "module github.com/coreos/go-syst"..., 548) = 36
+read(8, "", 512)                        = 0
+close(8)                                = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 824634397736
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 25
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+sched_yield()                           = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc000380148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/google/go-cmp/@v/v0.3.1.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001cf59c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=40, ...}) = 0
+read(3, "module github.com/google/go-cmp\n"..., 552) = 40
+read(3, "", 512)                        = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/mattn/go-runewidth/@v/v0.0.2.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001cf59c) = -1 EPERM (Operation not permitted)
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+fstat(3, {st_mode=S_IFREG|0664, st_size=37, ...}) = 0
+read(3, "module github.com/mattn/go-runew"..., 549) = 37
+read(3, "", 512)                        = 0
+close(3)                                = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 824633995264
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/gopkg.in/square/go-jose.v2/@v/v2.3.1.mod", O_RDONLY|O_CLOEXEC) = 3
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000080148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/hashicorp/golang-lru/@v/v0.5.1.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0001d159c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=39, ...}) = 0
+read(3, "module github.com/hashicorp/gola"..., 551) = 39
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000280848, FUTEX_WAKE_PRIVATE, 1) = 1
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000400148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/!azure/go-autorest/logger/@v/v0.1.0.mod", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc0000a759c) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0664, st_size=52, ...}) = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/github.com/kevinburke/ssh_config/@v/v0.0.0-20190725054713-01f96b0aa0cd.mod", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc00050559c) = -1 EPERM (Operation not permitted)
+fstat(8, {st_mode=S_IFREG|0664, st_size=40, ...}) = 0
+read(8, "module github.com/kevinburke/ssh"..., 552) = 40
+read(8, "", 512)                        = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/golang.org/x/exp/@v/v0.0.0-20190510132918-efd6b22b2522.mod", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0003a359c) = -1 EPERM (Operation not permitted)
+fstat(8, {st_mode=S_IFREG|0664, st_size=327, ...}) = 0
+read(8, "module golang.org/x/exp\n\ngo 1.11"..., 839) = 327
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/cache/download/sigs.k8s.io/yaml/@v/v1.1.0.mod", O_RDONLY|O_CLOEXEC) = 8
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp", O_RDONLY|O_CLOEXEC) = 12
+epoll_ctl(4, EPOLL_CTL_ADD, 12, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 12, 0xc0000a3aec) = -1 EPERM (Operation not permitted)
+getdents64(12, /* 14 entries */, 8192)  = 456
+getdents64(12, /* 0 entries */, 8192)   = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp/syntax", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 824636424936
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp/onepass.go", {st_mode=S_IFREG|0644, st_size=14319, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/floor_wasm.s", {st_mode=S_IFREG|0644, st_size=447, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/erf_s390x.s", {st_mode=S_IFREG|0644, st_size=8699, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/abs.go", {st_mode=S_IFREG|0644, st_size=363, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/cosh_s390x.s", {st_mode=S_IFREG|0644, st_size=5728, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/tanh_s390x.s", {st_mode=S_IFREG|0644, st_size=4681, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/sqrt_mipsx.s", {st_mode=S_IFREG|0644, st_size=375, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/arith_s390x_test.go", {st_mode=S_IFREG|0644, st_size=11041, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/sqrt_arm.s", {st_mode=S_IFREG|0644, st_size=521, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/log10.go", {st_mode=S_IFREG|0644, st_size=740, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/exp_arm64.s", {st_mode=S_IFREG|0644, st_size=5477, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/stubs_riscv64.s", {st_mode=S_IFREG|0644, st_size=1794, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/erf.go", {st_mode=S_IFREG|0644, st_size=11656, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/all_test.go", {st_mode=S_IFREG|0644, st_size=86226, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/expm1.go", {st_mode=S_IFREG|0644, st_size=8025, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/modf_arm64.s", {st_mode=S_IFREG|0644, st_size=439, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/big", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/atanh.go", {st_mode=S_IFREG|0644, st_size=1973, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/rand", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/stubs_amd64.s", {st_mode=S_IFREG|0644, st_size=1440, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/log.go", {st_mode=S_IFREG|0644, st_size=3890, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/log_s390x.s", {st_mode=S_IFREG|0644, st_size=4415, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/asin.go", {st_mode=S_IFREG|0644, st_size=983, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/const.go", {st_mode=S_IFREG|0644, st_size=2228, ...}, AT_SYMLINK_NOFOLLOW) = 0
+close(13)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/abs.go", O_RDONLY|O_CLOEXEC) = 16
+epoll_ctl(4, EPOLL_CTL_ADD, 16, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 16, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(16, "// Copyright 2009 The Go Authors"..., 4096) = 363
+close(16)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/acosh.go", O_RDONLY|O_CLOEXEC) = 16
+epoll_ctl(4, EPOLL_CTL_ADD, 16, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 16, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(16, "// Copyright 2010 The Go Authors"..., 4096) = 1765
+close(16)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/all_test.go", O_RDONLY|O_CLOEXEC) = 15
+epoll_ctl(4, EPOLL_CTL_ADD, 15, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 15, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(15, "// Copyright 2009 The Go Authors"..., 4096) = 4096
+close(15)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/arith_s390x.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2016 The Go Authors"..., 4096) = 2057
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/arith_s390x_test.go", O_RDONLY|O_CLOEXEC) = 13
+epoll_ctl(4, EPOLL_CTL_ADD, 13, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 13, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(13, "// Copyright 2016 The Go Authors"..., 4096) = 4096
+close(13)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/asin.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2009 The Go Authors"..., 4096) = 983
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/asinh.go", O_RDONLY|O_CLOEXEC) = 15
+epoll_ctl(4, EPOLL_CTL_ADD, 15, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 15, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+read(15, "// Copyright 2010 The Go Authors"..., 4096) = 1899
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+close(15)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/atan.go", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(10, "// Copyright 2009 The Go Authors"..., 4096) = 3043
+close(10)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/atan2.go", O_RDONLY|O_CLOEXEC) = 15
+epoll_ctl(4, EPOLL_CTL_ADD, 15, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 15, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(15, "// Copyright 2009 The Go Authors"..., 4096) = 1485
+close(15)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/atanh.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2010 The Go Authors"..., 4096) = 1973
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/bits.go", O_RDONLY|O_CLOEXEC) = 14
+epoll_ctl(4, EPOLL_CTL_ADD, 14, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 14, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(14, "// Copyright 2009 The Go Authors"..., 4096) = 1911
+close(14)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/cbrt.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2009 The Go Authors"..., 4096) = 2300
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/const.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2009 The Go Authors"..., 4096) = 2228
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/copysign.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2010 The Go Authors"..., 4096) = 378
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/dim.go", O_RDONLY|O_CLOEXEC) = 13
+epoll_ctl(4, EPOLL_CTL_ADD, 13, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413000, u64=139814625799688}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 13, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(13, "// Copyright 2010 The Go Authors"..., 4096) = 1584
+close(13)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/math/erf.go", O_RDONLY|O_CLOEXEC) = 13
+epoll_ctl(4, EPOLL_CTL_ADD, 13, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555413224, u64=139814625799912}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 13, 0xc0002178ec) = -1 EPERM (Operation not permitted)
+read(13, "// Copyright 2010 The Go Authors"..., 4096) = 4096
+sched_yield()                           = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc0002804c8, FUTEX_WAKE_PRIVATE, 1) = 1
+getpid()                                = 19146
+tgkill(19146, 19154, SIGURG)            = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp/syntax/simplify.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc00005b8ec) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2011 The Go Authors"..., 4096) = 4096
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp/syntax/simplify_test.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412776, u64=139814625799464}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc00005b8ec) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2011 The Go Authors"..., 4096) = 4096
+close(7)                                = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555412328, u64=139814625799016}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc00005baec) = -1 EPERM (Operation not permitted)
+getdents64(10, /* 34 entries */, 8192)  = 1400
+getdents64(10, /* 0 entries */, 8192)   = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix/at_aix.go", {st_mode=S_IFREG|0644, st_size=428, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix/at.go", {st_mode=S_IFREG|0644, st_size=1273, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix/nonblocking_js.go", {st_mode=S_IFREG|0644, st_size=270, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/syscall/unix/at_darwin.go", {st_mode=S_IFREG|0644, st_size=884, ...}, AT_SYMLINK_NOFOLLOW) = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+mlock(0xc0004a7000, 4096)               = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f2900fc4000
+mprotect(0x7f2900fc5000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7f29017c3fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f29017c49d0, tls=0x7f29017c4700, child_tidptr=0x7f29017c49d0) = 19203
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+read(8, "", 8)                          = 0
+close(8)                                = 0
+close(9)                                = 0
+epoll_ctl(4, EPOLL_CTL_DEL, 12, 0xc0004cacbc) = 0
+close(12)                               = 0
+epoll_ctl(4, EPOLL_CTL_DEL, 16, 0xc0004cacbc) = 0
+close(16)                               = 0
+waitid(P_PID, 19200, {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=19200, si_uid=1000, si_status=0, si_utime=0, si_stime=0}, WEXITED|WNOWAIT, NULL) = 0
+wait4(19200, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, {ru_utime={tv_sec=0, tv_usec=1564}, ru_stime={tv_sec=0, tv_usec=0}, ...}) = 19200
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/cpu/cpu.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546519112, u64=139814616905800}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0004cae8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2017 The Go Authors"..., 32768) = 7184
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/cpu/cpu_amd64.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546519112, u64=139814616905800}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0004cae8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2018 The Go Authors"..., 32768) = 196
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/cpu/cpu_x86.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546519112, u64=139814616905800}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0004cae8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2017 The Go Authors"..., 32768) = 2751
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/cpu/cpu_x86.s", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0004cae8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2017 The Go Authors"..., 32768) = 576
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/linux_amd64/internal/cpu.a", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0004cb134) = -1 EPERM (Operation not permitted)
+pread64(7, "!<arch>\n", 8, 0)           = 8
+read(7, "!<arch>\n__.PKGDEF       0       "..., 1024) = 1024
+close(7)                                = 0
+futex(0xc000280848, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/bytealg.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2018 The Go Authors"..., 32768) = 664
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/compare_native.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2018 The Go Authors"..., 32768) = 590
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/count_native.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2018 The Go Authors"..., 32768) = 616
+read(9, "", 32768)                      = 0
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/equal_generic.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2019 The Go Authors"..., 32768) = 628
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/equal_native.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2018 The Go Authors"..., 32768) = 789
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/index_amd64.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2018 The Go Authors"..., 32768) = 617
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/index_native.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2018 The Go Authors"..., 32768) = 559
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/indexbyte_native.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+read(8, "// Copyright 2018 The Go Authors"..., 32768) = 378
+read(8, "", 32768)                      = 0
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/bytealg/compare_amd64.s", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc0005bee8c) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xc000100148, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xc00058c148, FUTEX_WAKE_PRIVATE, 1) = 1
+getpid()                                = 19146
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 19146
+tgkill(19146, 19215, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = 0
+epoll_pwait(4, [], 128, 0, NULL, 140732104404176) = 0
+futex(0xc000a504c8, FUTEX_WAKE_PRIVATE, 1) = 1
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc000280848, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000280848, FUTEX_WAKE_PRIVATE, 1) = 1
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+getpid()                                = 19146
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 19146
+tgkill(19146, 19150, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = -1 ETIMEDOUT (Connection timed out)
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19149, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19149, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19203, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = -1 EAGAIN (Resource temporarily unavailable)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EAGAIN (Resource temporarily unavailable)
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19149, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19150, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19215, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19203, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = 0
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19217, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19156, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19149, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19150, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19215, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa90, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = -1 EAGAIN (Resource temporarily unavailable)
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecaa68, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=100000}) = -1 EAGAIN (Resource temporarily unavailable)
+epoll_pwait(4, [], 128, 0, NULL, 140732104404176) = 0
+futex(0xc000380148, FUTEX_WAKE_PRIVATE, 1) = 1
+getpid()                                = 19146
+tgkill(19146, 19153, SIGURG)            = 0
+getpid()                                = 19146
+tgkill(19146, 19203, SIGURG)            = 0
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 1
+madvise(0xc000c00000, 2097152, MADV_NOHUGEPAGE) = 0
+madvise(0xc000dbc000, 8192, MADV_FREE)  = 0
+futex(0xee2d40, FUTEX_WAKE_PRIVATE, 1)  = 1
+write(6, "\0", 1)                       = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/builder.go", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(10, "// Copyright 2017 The Go Authors"..., 32768) = 3562
+read(10, "", 32768)                     = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/compare.go", O_RDONLY|O_CLOEXEC) = 12
+epoll_ctl(4, EPOLL_CTL_ADD, 12, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 12, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(12, "// Copyright 2015 The Go Authors"..., 32768) = 1081
+read(12, "", 32768)                     = 0
+close(12)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/reader.go", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(10, "// Copyright 2009 The Go Authors"..., 32768) = 3629
+read(10, "", 32768)                     = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/replace.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2011 The Go Authors"..., 32768) = 14788
+read(9, "", 32768)                      = 0
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/search.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2012 The Go Authors"..., 32768) = 4291
+read(9, "", 32768)                      = 0
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/strings/strings.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc00051ee8c) = -1 EPERM (Operation not permitted)
+read(9, "// Copyright 2009 The Go Authors"..., 32768) = 27845
+read(9, "", 32768)                      = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000100148, FUTEX_WAKE_PRIVATE, 1) = 1
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/linux_amd64/strings.a", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 8, 0xc00051f134) = -1 EPERM (Operation not permitted)
+pread64(8, "!<arch>\n", 8, 0)           = 8
+read(8, "!<arch>\n__.PKGDEF       0       "..., 1024) = 1024
+close(8)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/regexp/syntax/compile.go", O_RDONLY|O_CLOEXEC) = 8
+epoll_ctl(4, EPOLL_CTL_ADD, 8, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/encoding/pem/pem.go", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc000960e8c) = -1 EPERM (Operation not permitted)
+sched_yield()                           = 0
+futex(0xee2d40, FUTEX_WAIT_PRIVATE, 2, NULL) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 202
+futex(0xee2d40, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xee2d40, FUTEX_WAKE_PRIVATE, 1)  = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/path/match.go", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc0000a2e8c) = -1 EPERM (Operation not permitted)
+read(10, "// Copyright 2010 The Go Authors"..., 32768) = 4777
+read(10, "", 32768)                     = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/path/path.go", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc0000a2e8c) = -1 EPERM (Operation not permitted)
+read(10, "// Copyright 2009 The Go Authors"..., 32768) = 5770
+read(10, "", 32768)                     = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/linux_amd64/path.a", O_RDONLY|O_CLOEXEC) = 10
+epoll_ctl(4, EPOLL_CTL_ADD, 10, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+read(9, "", 32768)                      = 0
+close(9)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/linux_amd64/encoding/pem.a", O_RDONLY|O_CLOEXEC) = 9
+epoll_ctl(4, EPOLL_CTL_ADD, 9, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 9, 0xc000961134) = -1 EPERM (Operation not permitted)
+pread64(9, "!<arch>\n", 8, 0)           = 8
+read(9, "!<arch>\n__.PKGDEF       0       "..., 1024) = 1024
+close(9)                                = 0
+epoll_ctl(4, EPOLL_CTL_DEL, 10, 0xc0000a3134) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = 6
+futex(0xecaa68, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+sched_yield()                           = 0
+futex(0xecaa90, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xeca978, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xc000a504c8, FUTEX_WAKE_PRIVATE, 1) = 1
+pread64(10, "!<arch>\n", 8, 0)          = 8
+read(10, "!<arch>\n__.PKGDEF       0       "..., 1024) = 1024
+close(10)                               = 0
+nanosleep({tv_sec=0, tv_nsec=3000}, NULL) = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc00058c148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/src/internal/lazyregexp/lazyre.go", O_RDONLY|O_CLOEXEC) = 7
+epoll_ctl(4, EPOLL_CTL_ADD, 7, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=546520456, u64=139814616907144}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 7, 0xc0000a0e8c) = -1 EPERM (Operation not permitted)
+read(7, "// Copyright 2018 The Go Authors"..., 32768) = 1869
+read(7, "", 32768)                      = 0
+close(7)                                = 0
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/go/pkg/linux_amd64/internal/lazyregexp.a", O_RDONLY|O_CLOEXEC) = 12
+epoll_ctl(4, EPOLL_CTL_ADD, 12, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 12, 0xc0000a1134) = -1 EPERM (Operation not permitted)
+pread64(12, "!<arch>\n", 8, 0)          = 8
+read(12, "!<arch>\n__.PKGDEF       0       "..., 1024) = 1024
+close(12)                               = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000a504c8, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/home/wuls/Downloads/go1.14.3.linux-amd64/pkg/mod/google.golang.org/protobuf@v1.25.0/internal/version/version.go", O_RDONLY|O_CLOEXEC) = 12
+epoll_ctl(4, EPOLL_CTL_ADD, 12, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=555410984, u64=139814625797672}}) = -1 EPERM (Operation not permitted)
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=19146, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EPERM (Operation not permitted)
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000080148, FUTEX_WAKE_PRIVATE, 1) = 1
+read(13, "", 32768)                     = 0
+futex(0xecb9a8, FUTEX_WAIT_PRIVATE, 0, NULL) = ?
++++ exited with 0 +++

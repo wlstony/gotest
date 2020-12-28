@@ -25,9 +25,10 @@ func main() {
 	greeter := proto.NewGreeterService("demo", service.Client())
 
 	// Call the greeter
-	rsp, err := greeter.Hello(context.TODO(), &proto.Request{Name: "John"})
+	rsp, err := greeter.Hello(context.TODO(), &proto.Request{Name: "", Age:10})
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("err:", err)
+		return
 	}
 
 	// Print response

@@ -15,6 +15,8 @@ type User struct {
 }
 
 func main() {
+	letters := []string{"a", "b", "c", "d"}
+	fmt.Println(letters[0:0])
 	user := User{
 		Id:    1,
 		Name:  "John Doe",

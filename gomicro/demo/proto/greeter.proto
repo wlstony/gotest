@@ -3,13 +3,27 @@ syntax = "proto3";
 
 package demo;
 
+import "github.com/mwitkow/go-proto-validators/validator.proto";
 
 service Greeter {
   rpc Hello(Request) returns (Response) {}
 }
 message Request {
-  string name = 1;
+  string name = 1 [(validator.field) = {msg_exists : true, human_error : "name不能为空", length_gt:3}];
+  uint32 age = 2 [(validator.field) = {int_gt: 0, int_lt: 100}];
 }
 message Response {
-  string greeting =2;
+  string greeting =3;
+  uint32 age = 4;
 }
+
+//    export GOPATH=/home/wuls/Downloads/go1.14.3.linux-amd64
+//    &&
+//    protoc  \
+//    --proto_path=${GOPATH}/src \
+//    --proto_path=${GOPATH}/src/github.com/google/protobuf/src \
+//    --proto_path=. \
+//    --go_out=demo/ \
+//    --govalidators_out=demo/ \
+//    --micro_out=demo/ \
+//    proto/greeter.proto

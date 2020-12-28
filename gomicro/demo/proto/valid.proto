@@ -1,0 +1,9 @@
+// file: test.proto
+syntax = "proto3";
+
+package pb;
+
+message IP {
+  //@inject_tag: tips:"ip=ip不合法,required=ip为必填项" validate:"required,ip"
+  string Address = 1;
+}
