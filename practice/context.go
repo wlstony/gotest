@@ -7,21 +7,21 @@ import (
 )
 
 func main() {
-	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
-	go handle(ctx, 500*time.Millisecond)
+	go handle(ctx, 6*time.Second)
 	select {
 	case <-ctx.Done():
-		fmt.Println("main done", ctx.Err())
+		fmt.Println("main done", ctx.Err(), time.Now())
 	}
 }
 
 func handle(ctx context.Context, duration time.Duration) {
 	select {
 	case <-ctx.Done():
-		fmt.Println("handle done", ctx.Err())
+		fmt.Println("handle done", ctx.Err(), time.Now())
 	case <-time.After(duration):
-		fmt.Println("process request with", duration)
+		fmt.Println("process request with", duration, time.Now())
 	}
 }

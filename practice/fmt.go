@@ -1,19 +1,19 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/zsais/go-gin-prometheus"
+	"fmt"
+	"net/http"
 )
 
 func main() {
-	r := gin.New()
+	http.HandleFunc("/", HelloServer)
+	server := &http.Server{
+		Addr:              ":3397",
+		ReadTimeout:       10,
+	}
+	server.ListenAndServe()
+}
 
-	p := ginprometheus.NewPrometheus("gin")
-	p.Use(r)
-
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, "Hello world!")
-	})
-
-	r.Run(":29090")
+func HelloServer(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
 }
