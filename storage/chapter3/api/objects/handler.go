@@ -2,13 +2,18 @@ package objects
 
 import (
 	"fmt"
+	"github.com/api/database"
 	"github.com/api/heartbeat"
 	"github.com/api/location"
+	"github.com/api/utils"
 	"io"
 	"log"
 	"net/http"
+	"net/url"
+	"strconv"
 	"strings"
 )
+
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	m := r.Method
@@ -25,13 +30,35 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		get(w, r)
 		return
 	}
+	if m == http.MethodDelete {
+		del(w, r)
+		return
+	}
 	w.WriteHeader(http.StatusMethodNotAllowed)
 }
 func put(w http.ResponseWriter, r *http.Request) {
-	object := strings.Split(r.URL.EscapedPath(), "/")[2]
-	c, e := storeObject(r.Body, object)
+	hash := utils.GetHashFromHeader(r.Header)
+	if hash == "" {
+		log.Println("missing object hash in digest header")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+	c, e := storeObject(r.Body, url.PathEscape(hash))
 	if e != nil {
 		log.Println(e)
+		w.WriteHeader(c)
+		return
+	}
+	if c != http.StatusOK {
+		w.WriteHeader(c)
+		return
+	}
+	name := strings.Split(r.URL.EscapedPath(), "/")[2]
+	size := utils.GetSiseFromHeader(r.Header)
+	e = database.AddVersion(name, hash, size)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusInternalServerError)
 	}
 	w.WriteHeader(c)
 }
@@ -62,7 +89,29 @@ func putStream(object string) (*PutStream, error) {
 	return NewPutStream(server, object), nil
 }
 func get(w http.ResponseWriter, r *http.Request) {
-	object := strings.Split(r.URL.EscapedPath(), "/")[2]
+	name := strings.Split(r.URL.EscapedPath(), "/")[2]
+	versionId := r.URL.Query()["version"]
+	version := 0
+	var ve error
+	if len(versionId) != 0 {
+		version, ve = strconv.Atoi(versionId[0])
+		if ve != nil {
+			log.Println(ve)
+			w.WriteHeader(http.StatusBadRequest)
+			return
+		}
+	}
+	meta, me := database.GetMetadata(name, version)
+	if me != nil {
+		log.Println(me)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	if meta.Hash == "" {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	object := url.PathEscape(meta.Hash)
 	stream, e := getStream(object)
 	if e != nil {
 		log.Println(e)
@@ -77,4 +126,21 @@ func getStream(object string) (io.Reader, error) {
 		return nil, fmt.Errorf("object %s locate fail", object)
 	}
 	return NewGetStream(server, object)
+}
+
+func del(w http.ResponseWriter, r *http.Request)  {
+	name := strings.Split(r.URL.EscapedPath(), "/")[2]
+	version, e := database.SearchLatestVersion(name)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	e = database.PutMetadata(name, version.Version+1, 0, "")
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
 }

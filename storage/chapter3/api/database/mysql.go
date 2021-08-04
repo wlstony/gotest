@@ -1,28 +1,46 @@
 package database
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"os"
+	"database/sql"
+	"errors"
+	_ "fmt"
+	_ "github.com/go-sql-driver/mysql"
+	"time"
 )
 
-type Metadata struct {
-	Name string
-	Version int
-	Size int64
-	Hash string
+var _db *sql.DB
+
+func init() {
+	//sql.Register("mysql", mysql.MySQLDriver{})
+	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/test")
+	if err != nil {
+		panic(err)
+	}
+	// See "Important settings" section.
+	db.SetConnMaxLifetime(time.Minute * 3)
+	db.SetMaxOpenConns(10)
+	db.SetMaxIdleConns(10)
+	_db = db
 }
 
-func getMetadata(name string, versionId int)  (meta Metadata, e error) {
-	url := fmt.Sprintf("http://%s/metadata/objects/%s_%d", os.Getenv("META_SERVER"), name, versionId)
-	r, e := http.Get(url)
+type Metadata struct {
+	Name    string
+	Version int
+	Size    int64
+	Hash    string
+}
+
+func getMetadata(name string, versionId int) (meta Metadata, e error) {
+	rows, e := _db.Query("select * from objects where name=? and version=?", name, versionId)
 	if e != nil {
 		return
 	}
-	result, _ := ioutil.ReadAll(r.Body)
-	json.Unmarshal(result, &meta)
+	for rows.Next() {
+		e = rows.Scan(&meta.Name, &meta.Version, &meta.Size, &meta.Hash)
+		if e != nil {
+			return
+		}
+	}
 	return
 }
 
@@ -30,55 +48,47 @@ type hit struct {
 	Source Metadata `json:"_source"`
 }
 type searchResult struct {
-	Hits struct{
+	Hits struct {
 		Total int
-		Hits []hit
+		Hits  []hit
 	}
 }
-func SearchLatestVersion(name string) (meta Metadata, e error)  {
-	url := fmt.Sprintf("http://%s/metadata/_search?q=, ", os.Getenv("META_SERVER"))
-	r, e := http.Get(url)
-	if e != nil {
-		return
+
+func SearchLatestVersion(name string) (meta Metadata, e error) {
+	rows, err := _db.Query("select * from objects where `name`=?", name)
+	if err != nil {
+		return meta, err
 	}
-	if r.StatusCode != http.StatusOK {
-		e = fmt.Errorf("fail to search lastest")
-		return
-	}
-	result, _ := ioutil.ReadAll(r.Body)
-	var sr searchResult
-	json.Unmarshal(result, &sr)
-	if len(sr.Hits.Hits) != 0 {
-		meta = sr.Hits.Hits[0].Source
+	for rows.Next() {
+		re := rows.Scan(&meta.Name, &meta.Version, &meta.Size, &meta.Hash)
+		if re != nil {
+			return meta, re
+		}
 	}
 	return
 }
-func GetMetadata(name string, version int) (meta Metadata, e error)  {
-	if version ==0 {
+func GetMetadata(name string, version int) (meta Metadata, e error) {
+	if version == 0 {
 		return SearchLatestVersion(name)
 	}
 	return getMetadata(name, version)
 }
-func PutMetadata(name string, version int, size init64, hash string)  {
-
+func PutMetadata(name string, version int, size int64, hash string) error {
+	r, e := _db.Exec("insert into objects(`name`, `version`, `size`, `hash`) values(?, ?, ?, ?) ", name, version, size, hash)
+	if e != nil {
+		return e
+	}
+	af, er := r.RowsAffected()
+	if af <= 0 {
+		return errors.New(er.Error())
+	}
+	return nil
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func AddVersion(name, hash string, size int64) error {
+	version, e := SearchLatestVersion(name)
+	if e != nil {
+		return e
+	}
+	return PutMetadata(name, version.Version+1, size, hash)
+}

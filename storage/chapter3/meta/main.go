@@ -1,1 +1,1 @@
-package meta
+package main
