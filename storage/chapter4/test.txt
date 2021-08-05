@@ -1,0 +1,8 @@
+echo -n 'only one instance' | openssl dgst -sha256
+
+curl -vvv http://127.0.0.1:7001/objects/test4_1 -X PUT -d 'only one instance' -H "digest:SHA-256RP8pq46Mm+XlYHLyqBBG+LUu89hTQytn0G4xezxijM4="
+curl -vvv http://127.0.0.1:7001/objects/test4_1
+
+
+curl -vvv http://127.0.0.1:7001/objects/test4_2 -X PUT -d 'only 121 instance' -H "digest:SHA-256MTviQUwWZ/zQAr+N1byw4eeJEbYZgFPGO5FCHoLIna8="
+curl -vvv http://127.0.0.1:7001/objects/test4_2
