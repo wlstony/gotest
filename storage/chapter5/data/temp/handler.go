@@ -4,10 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/data/location"
+	"github.com/data/utils"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"strconv"
@@ -39,6 +41,16 @@ type tempInfo struct {
 	Uuid string
 	Name string
 	Size int64
+}
+
+func (t *tempInfo) hash() string  {
+	s := strings.Split(t.Name, ".")
+	return s[0]
+}
+func (t * tempInfo) id() int  {
+	s := strings.Split(t.Name, ".")
+	id, _ := strconv.Atoi(s[1])
+	return id
 }
 
 func post(w http.ResponseWriter, r *http.Request) {
@@ -110,9 +122,6 @@ func patch(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	actual := info.Size()
-	fmt.Println("info:", info)
-	fmt.Println("actual:", actual)
-	fmt.Println("tempinfo:", tempinfo)
 	if actual > tempinfo.Size {
 		fmt.Println("larger")
 	}
@@ -158,6 +167,7 @@ func put(w http.ResponseWriter, r *http.Request) {
 	defer f.Close()
 	info, e := f.Stat()
 	if e != nil {
+		fmt.Println("eee:", e)
 		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)
 		return
@@ -173,11 +183,17 @@ func put(w http.ResponseWriter, r *http.Request) {
 	commitTempObject(datFile, tempinfo)
 }
 func commitTempObject(datFile string, tempinfo *tempInfo) {
-	if _, err := os.Stat( os.Getenv("STORAGE_ROOT")+"/objects/"); os.IsNotExist(err) {
-		os.MkdirAll( os.Getenv("STORAGE_ROOT")+"/objects/", os.ModePerm)
+	f, _ := os.Open(datFile)
+	d := url.PathEscape(utils.CalculateHash(f))
+	f.Close()
+	if _, err := os.Stat(os.Getenv("STORAGE_ROOT") + "/objects/"); os.IsNotExist(err) {
+		os.MkdirAll(os.Getenv("STORAGE_ROOT") + "/objects/", os.ModePerm)
 	}
-	os.Rename(datFile, os.Getenv("STORAGE_ROOT")+"/objects/"+tempinfo.Name)
-	location.Add(tempinfo.Name)
+	err := os.Rename(datFile, os.Getenv("STORAGE_ROOT") + "/objects/" + tempinfo.Name + "." +d)
+	if err != nil {
+		fmt.Println("commitTempObject:", err)
+	}
+	location.Add(tempinfo.hash(), tempinfo.id())
 
 }
 func del(w http.ResponseWriter, r *http.Request) {

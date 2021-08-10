@@ -50,11 +50,31 @@ func GetDataServers() []string {
 	}
 	return ds
 }
-func ChooseRandomDataServer() string {
-	ds := GetDataServers()
-	n := len(ds)
-	if n == 0 {
-		return ""
+//n需要的数据节点个数
+//exclude不能包含哪些节点，用于数据修复
+func ChooseRandomDataServer(n int, exclude map[int]string) (ds []string) {
+	candidates := make([]string, 0)
+	reverseExcludeMap := make(map[string]int)
+	for id, addr := range exclude {
+		reverseExcludeMap[addr] = id
 	}
-	return ds[rand.Intn(n)]
+	servers := GetDataServers()
+	for i := range servers {
+		s := servers[i]
+		_, excluded := reverseExcludeMap[s]
+		if !excluded {
+			candidates = append(candidates, s)
+		}
+	}
+	length := len(candidates)
+	//无法满足要求，返回空
+	if length < n {
+		 return
+	}
+	//随机返回指定的节点
+	p := rand.Perm(length)
+	for i := 0; i < n; i++ {
+		ds = append(ds, candidates[p[i]])
+	}
+	return
 }

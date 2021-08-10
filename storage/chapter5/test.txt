@@ -1,8 +1,20 @@
-echo -n 'only one instance' | openssl dgst -sha256
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8001 && export STORAGE_ROOT=/tmp/8001 && go run main.go
 
-curl -vvv http://127.0.0.1:7001/objects/test4_1 -X PUT -d 'only one instance' -H "digest:SHA-256RP8pq46Mm+XlYHLyqBBG+LUu89hTQytn0G4xezxijM4="
-curl -vvv http://127.0.0.1:7001/objects/test4_1
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8002 && export STORAGE_ROOT=/tmp/8002 && go run main.go
 
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8003 && export STORAGE_ROOT=/tmp/8003 && go run main.go
 
-curl -vvv http://127.0.0.1:7001/objects/test4_2 -X PUT -d 'only 121 instance' -H "digest:SHA-256MTviQUwWZ/zQAr+N1byw4eeJEbYZgFPGO5FCHoLIna8="
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8004 && export STORAGE_ROOT=/tmp/8004 && go run main.go
+
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8005 && export STORAGE_ROOT=/tmp/8005 && go run main.go
+
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8006 && export STORAGE_ROOT=/tmp/8006 && go run main.go
+
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8007 && export STORAGE_ROOT=/tmp/8007 && go run main.go
+
+export RABBITMQ_SERVER=amqp://guest:guest@127.0.0.1:32771 && export LISTEN_ADDRESS=127.0.0.1:8008 && export STORAGE_ROOT=/tmp/8008 && go run main.go
+
+curl -vvv http://127.0.0.1:7001/objects/test4_2 -X PUT -d '4+2 shards' -H "digest:SHA-256nWlT2TxnY4BXEFMDQ/0QhsKbyq4xI4Bu0Js5jNl4ZQ4="
+
 curl -vvv http://127.0.0.1:7001/objects/test4_2
+

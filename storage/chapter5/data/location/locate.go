@@ -6,21 +6,25 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"strings"
 	"sync"
 )
 var objects = make(map[string]int)
 var mutex sync.Mutex
 
-func Locate(hash string) bool {
+func Locate(hash string) int {
 	fmt.Println("data locate objects:", objects)
 	mutex.Lock()
-	_, ok := objects[hash]
+	id, ok := objects[hash]
 	mutex.Unlock()
-	return ok
+	if !ok {
+		return -1
+	}
+	return id
 }
-func Add(hash string)  {
+func Add(hash string, id int)  {
 	mutex.Lock()
-	objects[hash] = 1
+	objects[hash] = id
 	mutex.Unlock()
 }
 func Del(hash string)  {
@@ -28,7 +32,10 @@ func Del(hash string)  {
 	delete(objects, hash)
 	mutex.Unlock()
 }
-
+type locateMessage struct {
+	Addr string
+	Id   int
+}
 func StartLocate() {
 	fmt.Println("data StartLocate")
 	q := rabbit.New(os.Getenv("RABBITMQ_SERVER"))
@@ -48,17 +55,31 @@ func StartLocate() {
 		//	fmt.Println("exist")
 		//	q.Send(msg.ReplyTo, os.Getenv("LISTEN_ADDRESS"))
 		//}
-		exist := Locate(hash)
-		if exist {
-			q.Send(msg.ReplyTo, os.Getenv("LISTEN_ADDRESS"))
+		id := Locate(hash)
+		if id != -1 {
+			//q.Send(msg.ReplyTo, os.Getenv("LISTEN_ADDRESS"))
+			q.Send(msg.ReplyTo, locateMessage{
+				Addr: os.Getenv("LISTEN_ADDRESS"),
+				Id:   id,
+			})
 		}
 	}
 }
 
 func CollectObjects()  {
 	files, _ := filepath.Glob(os.Getenv("STORAGE_ROOT") + "/objects/*")
+	fmt.Println("files:", os.Getenv("STORAGE_ROOT") + "/objects/*")
 	for i := range files {
-		hash := filepath.Base(files[i])
-		objects[hash] = 1
+		file := strings.Split(filepath.Base(files[i]), ".")
+		if len(file) != 3 {
+			panic(files[i] + " file length not 3")
+		}
+		hash := file[0]
+		id, e := strconv.Atoi(file[1])
+		if e != nil {
+			panic(e)
+		}
+		objects[hash] = id
 	}
+	fmt.Println("objects:",objects)
 }

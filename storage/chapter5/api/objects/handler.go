@@ -2,6 +2,7 @@ package objects
 
 import (
 	"fmt"
+	"github.com/api/constant"
 	"github.com/api/database"
 	"github.com/api/heartbeat"
 	"github.com/api/location"
@@ -14,15 +15,9 @@ import (
 	"strings"
 )
 
-
 func Handler(w http.ResponseWriter, r *http.Request) {
 	m := r.Method
 	if m == http.MethodPut {
-		//tmp, e := ioutil.ReadAll(r.Body)
-		//fmt.Println("tmp:", string(tmp))
-		//if e != nil{
-		//	 fmt.Println("put error:", e.Error())
-		//}
 		put(w, r)
 		return
 	}
@@ -44,10 +39,6 @@ func put(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	size := utils.GetSizeFromHeader(r.Header)
-	//buf := make([]byte, size)
-	//i, e := r.Body.Read(buf)
-	//fmt.Println("api put:", string(buf), ",i:" ,i, ", e:", e)
-
 	c, e := storeObject(r.Body, hash, size)
 	if e != nil {
 		log.Println(e)
@@ -80,7 +71,7 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 	fmt.Println("store object hash:", d)
 	if d != hash {
 		stream.Commit(false)
-		return http.StatusBadRequest,fmt.Errorf("api store object hash mismatched %v, %v", d, hash)
+		return http.StatusBadRequest, fmt.Errorf("api store object hash mismatched %v, %v", d, hash)
 	}
 	//buf := make([]byte, size)
 	//r.Read(buf)
@@ -93,12 +84,12 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 	stream.Commit(true)
 	return http.StatusOK, nil
 }
-func putStream(object string, size int64) (*TempPutStream, error) {
-	server := heartbeat.ChooseRandomDataServer()
-	if server == "" {
-		return nil, fmt.Errorf("cannot find any dataServer")
+func putStream(hash string, size int64) (*RSPutStream, error) {
+	servers := heartbeat.ChooseRandomDataServer(constant.AllShards, nil)
+	if len(servers) != constant.AllShards {
+		return nil, fmt.Errorf("can not find enough dataServer")
 	}
-	return NewTempPutStream(server, object, size)
+	return NewRSPutStream(servers, hash, size)
 }
 func get(w http.ResponseWriter, r *http.Request) {
 	name := strings.Split(r.URL.EscapedPath(), "/")[2]
@@ -124,24 +115,37 @@ func get(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	object := url.PathEscape(meta.Hash)
-	stream, e := getStream(object)
+	hash := url.PathEscape(meta.Hash)
+	stream, e := getStream(hash, meta.Size)
+	if e != nil {
+		fmt.Println("getStream: ", e)
+	}
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	io.Copy(w, stream)
-}
-func getStream(object string) (io.Reader, error) {
-	server := location.Locate(object)
-	if server == "" {
-		return nil, fmt.Errorf("object %s locate fail", object)
+	_, e = io.Copy(w, stream)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusNotFound)
+		return
 	}
-	return NewGetStream(server, object)
+	stream.Close()
+}
+func getStream(hash string, size int64) (*RSGetStream, error) {
+	locateInfo := location.Locate(hash)
+	if len(locateInfo) < constant.DataShard {
+		return nil, fmt.Errorf("object %s locate fail, result %v", hash, locateInfo)
+	}
+	dataServers := make([]string, 0)
+	if len(locateInfo) != constant.AllShards {
+		dataServers = heartbeat.ChooseRandomDataServer(constant.AllShards-len(locateInfo), locateInfo)
+	}
+	return NewRSGetStream(locateInfo, dataServers, hash, size)
 }
 
-func del(w http.ResponseWriter, r *http.Request)  {
+func del(w http.ResponseWriter, r *http.Request) {
 	name := strings.Split(r.URL.EscapedPath(), "/")[2]
 	version, e := database.SearchLatestVersion(name)
 	if e != nil {

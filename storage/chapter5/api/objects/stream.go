@@ -5,7 +5,6 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
-	"runtime/debug"
 	"strings"
 )
 
@@ -96,7 +95,7 @@ func NewTempPutStream(server, hash string, size int64) (*TempPutStream, error)  
 	return &TempPutStream{Server:server, Uuid:string(uuid)}, nil
 }
 func (w *TempPutStream) Write(p []byte)(n int, err error)  {
-	fmt.Println("write:",  "http://" + w.Server + "/temp/" + w.Uuid, string(debug.Stack()))
+	//fmt.Println("write:",  "http://" + w.Server + "/temp/" + w.Uuid, string(debug.Stack()))
 	request, e := http.NewRequest("PATCH", "http://" + w.Server + "/temp/" + w.Uuid, strings.NewReader(string(p)))
 	if e != nil {
 		return 0, e

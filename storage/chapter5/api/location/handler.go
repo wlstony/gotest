@@ -3,10 +3,10 @@ package location
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/api/constant"
 	"github.com/rabbitmq/rabbit"
 	"net/http"
 	"os"
-	"strconv"
 	"strings"
 	"time"
 )
@@ -26,20 +26,42 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	b, _ := json.Marshal(info)
 	w.Write(b)
 }
-func Locate(name string) string {
+
+type locateMessage struct {
+	Addr string
+	Id   int
+}
+
+func Locate(name string) (locateInfo map[int]string) {
 	q := rabbit.New(os.Getenv("RABBITMQ_SERVER"))
 	fmt.Println("api Locate:", name)
 	q.Publish("dataServers", name)
 	c := q.Consume()
 	go func() {
+		//1 s 超时，无论拿到多少条消息
 		time.Sleep(time.Second)
 		q.Close()
 	}()
-	msg := <-c
-	s, _ := strconv.Unquote(string(msg.Body))
-	fmt.Println("api locate body s:", s)
-	return s
+	locateInfo = make(map[int]string)
+	fmt.Println("api locate locateInfo:", locateInfo)
+	for i:=0; i< constant.AllShards; i++  {
+		msg := <-c
+		fmt.Println("msg:", string( msg.Body))
+		if len(msg.Body) == 0 {
+			return
+		}
+		var info locateMessage
+		err := json.Unmarshal(msg.Body, &info)
+		if err != nil {
+			fmt.Println("Locate:", err)
+		}
+		locateInfo[info.Id] = info.Addr
+	}
+	fmt.Println("api locate locateInfo:", locateInfo)
+
+	return
 }
 func Exist(name string) bool {
-	return Locate(name) != ""
+	return len(Locate(name)) >= constant.DataShard
 }
+
