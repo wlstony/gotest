@@ -25,6 +25,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		get(w, r)
 		return
 	}
+	if m == http.MethodPost {
+		post(w, r)
+		return
+	}
 	if m == http.MethodDelete {
 		del(w, r)
 		return
@@ -115,7 +119,7 @@ func get(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	hash := url.PathEscape(meta.Hash)
+	hash := meta.Hash
 	stream, e := getStream(hash, meta.Size)
 	if e != nil {
 		fmt.Println("getStream: ", e)
@@ -125,12 +129,19 @@ func get(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	_, e = io.Copy(w, stream)
-	if e != nil {
-		log.Println(e)
-		w.WriteHeader(http.StatusNotFound)
-		return
+	//_, e = io.Copy(w, stream)
+	//if e != nil {
+	//	log.Println(e)
+	//	w.WriteHeader(http.StatusNotFound)
+	//	return
+	//}
+	offset := utils.GetOffsetFromHeader(r.Header)
+	if offset != 0 {
+		stream.Seek(offset, io.SeekCurrent)
+		w.Header().Set("content-range", fmt.Sprintf("bytes %d-%d/%d", offset, meta.Size-1, meta.Size))
+		w.WriteHeader(http.StatusPartialContent)
 	}
+	io.Copy(w, stream)
 	stream.Close()
 }
 func getStream(hash string, size int64) (*RSGetStream, error) {
@@ -160,4 +171,44 @@ func del(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+}
+
+func post(w http.ResponseWriter, r *http.Request) {
+	name := strings.Split(r.URL.EscapedPath(), "/")[2]
+	size, e := strconv.ParseInt(r.Header.Get("size"), 0, 64)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusForbidden)
+		return
+	}
+	hash := utils.GetHashFromHeader(r.Header)
+	if hash == "" {
+		log.Println("missing object hsh in digest header")
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+	if location.Exist(url.PathEscape(hash)) {
+		e = database.AddVersion(name, hash, size)
+		if e != nil {
+			log.Println(e)
+			w.WriteHeader(http.StatusInternalServerError)
+		} else {
+			w.WriteHeader(http.StatusOK)
+		}
+		return
+	}
+	ds := heartbeat.ChooseRandomDataServer(constant.AllShards, nil)
+	if len(ds) != constant.AllShards {
+		log.Println("can not find enough dataServer")
+		w.WriteHeader(http.StatusServiceUnavailable)
+		return
+	}
+	stream, e := NewRSResumablePutStream(ds, name, url.PathEscape(hash), size)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("location", "/temp/"+stream.ToToken())
+	w.WriteHeader(http.StatusCreated)
 }

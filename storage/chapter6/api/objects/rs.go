@@ -1,10 +1,15 @@
 package objects
 
 import (
+	"encoding/base64"
+	"encoding/json"
 	"fmt"
 	"github.com/api/constant"
+	"github.com/api/utils"
 	"github.com/klauspost/reedsolomon"
 	"io"
+	"log"
+	"net/http"
 )
 
 type RSPutStream struct {
@@ -52,7 +57,6 @@ func NewEncoder(writers []io.Writer) *encoder {
 }
 
 func (e *encoder) Write(p []byte) (n int, err error) {
-	fmt.Println("encoder write: ", string(p))
 	length := len(p)
 	current := 0
 	for length != 0 {
@@ -201,4 +205,121 @@ func (s *RSGetStream) Close() {
 			s.writers[i].(*TempPutStream).Commit(true)
 		}
 	}
+}
+
+func (s *RSGetStream) Seek(offset int64, whence int) (int64, error) {
+	if whence != io.SeekCurrent {
+		panic("Seek only support SeekCurrent ")
+	}
+	if offset < 0 {
+		panic("only support forward seek")
+	}
+	for offset != 0 {
+		length := int64(constant.BlockSize)
+		if offset < length {
+			length = offset
+		}
+		buf := make([]byte, length)
+		io.ReadFull(s, buf)
+		offset -= length
+	}
+	return offset, nil
+}
+
+type resumableToken struct {
+	Name string
+	Size int64
+	Hash string
+	Servers []string
+	Uuids []string
+}
+type RSResumablePutStream struct {
+	* RSPutStream
+	* resumableToken
+}
+
+func NewRSResumablePutStream(dataServers []string, name, hash string, size int64) (*RSResumablePutStream, error) {
+	putStream, e := NewRSPutStream(dataServers, hash, size)
+	if e != nil {
+		return nil, e
+	}
+	uuids := make([]string, constant.AllShards)
+	for i := range uuids {
+		uuids[i] = putStream.writers[i].(*TempPutStream).Uuid
+	}
+	token := &resumableToken{
+		Name:    name,
+		Size:    size,
+		Hash:    hash,
+		Servers: dataServers,
+		Uuids:   uuids,
+	}
+	return &RSResumablePutStream{
+		RSPutStream:    putStream,
+		resumableToken: token,
+	}, nil
+
+}
+func (s *RSResumablePutStream) ToToken() string  {
+	b, _ := json.Marshal(s)
+	return base64.StdEncoding.EncodeToString(b)
+}
+func NewRSResumablePutStreamFromToken(token string) (*RSResumablePutStream, error)  {
+	b, e := base64.StdEncoding.DecodeString(token)
+	if e != nil {
+		return nil, e
+	}
+	var t resumableToken
+	e = json.Unmarshal(b, &t)
+	if e != nil {
+		return nil, e
+	}
+	writers := make([]io.Writer, constant.AllShards)
+	for i := range writers {
+		writers[i] = &TempPutStream{
+			Server: t.Servers[i],
+			Uuid:   t.Uuids[i],
+		}
+	}
+	enc := NewEncoder(writers)
+	return &RSResumablePutStream{
+		&RSPutStream{enc},
+		&t,
+	}, nil
+
+}
+func (s *RSResumablePutStream) CurrentSize() int64  {
+	r, e := http.Head(fmt.Sprintf("http://%s/temp/%s", s.Servers[0], s.Uuids[0]))
+	fmt.Println("RSResumablePutStream CurrentSize:", fmt.Sprintf("http://%s/temp/%s", s.Servers[0], s.Uuids[0]))
+	if e != nil {
+		log.Println(e)
+		return -1
+	}
+	if r.StatusCode != http.StatusOK {
+		log.Println(r.StatusCode)
+		return -1
+	}
+	size := utils.GetSizeFromHeader(r.Header) * constant.DataShard
+	if size > s.Size {
+		size = s.Size
+	}
+	return size
+}
+
+type RSResumbleGetStream struct {
+	*decoder
+}
+
+func NewRSResumableGetStream(dataServers []string, uuids []string, size int64) (*RSResumbleGetStream, error) {
+	readers := make([]io.Reader, constant.AllShards)
+	var e error
+	for i := 0; i < constant.AllShards; i++ {
+		readers[i], e = NewTempGetStream(dataServers[i], uuids[i])
+		if e != nil {
+			return nil, e
+		}
+	}
+	writers := make([]io.Writer, constant.AllShards)
+	dec := NewDecoder(readers, writers, size)
+	return &RSResumbleGetStream{dec}, nil
 }

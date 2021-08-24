@@ -4,6 +4,7 @@ import (
 	"github.com/api/heartbeat"
 	"github.com/api/location"
 	"github.com/api/objects"
+	"github.com/api/temp"
 	"github.com/api/version"
 	"log"
 	"net/http"
@@ -26,6 +27,7 @@ func main() {
 	go heartbeat.ListenHeartbeat()
 	http.HandleFunc("/objects/", objects.Handler)
 	http.HandleFunc("/locate/", location.Handler)
+	http.HandleFunc("/temp/", temp.Handler)
 	http.HandleFunc("/versions/", version.Handler)
 	log.Fatal(http.ListenAndServe(os.Getenv("LISTEN_ADDRESS"), nil))
 }

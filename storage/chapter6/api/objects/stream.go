@@ -5,6 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"runtime/debug"
 	"strings"
 )
 
@@ -73,7 +74,7 @@ type TempPutStream struct {
 }
 
 func NewTempPutStream(server, hash string, size int64) (*TempPutStream, error)  {
-	fmt.Println("NewTempPutStream:", "http://" + server + "/temp/" + hash)
+	fmt.Println("NewTempPutStream:", "http://" + server + "/temp/" + hash, string(debug.Stack()))
 	req, e := http.NewRequest("POST", "http://" + server + "/temp/" + hash, nil)
 	if e != nil {
 		return nil, e
@@ -115,9 +116,13 @@ func (w *TempPutStream) Commit(good bool)  {
 	if good {
 		method = "PUT"
 	}
-	fmt.Println("api commit ", "http://" + w.Server + "/temp/" + w.Uuid, w)
 	req, _ := http.NewRequest(method, "http://" + w.Server + "/temp/" + w.Uuid, nil)
 	client := http.Client{}
 	res, rerr := client.Do(req)
 	fmt.Println("commit res:", res, ", error:", rerr)
+}
+
+func NewTempGetStream(server, uuid string)(*GetStream, error)  {
+	return newGetStream("http://" + server + "/temp/" + uuid)
+
 }

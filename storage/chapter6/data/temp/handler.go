@@ -18,12 +18,20 @@ import (
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	m := r.Method
+	if m == http.MethodHead {
+		head(w, r)
+		return
+	}
 	if m == http.MethodPut {
 		put(w, r)
 		return
 	}
 	if m == http.MethodPatch {
 		patch(w, r)
+		return
+	}
+	if m == http.MethodGet {
+		get(w, r)
 		return
 	}
 	if m == http.MethodPost {
@@ -203,4 +211,35 @@ func del(w http.ResponseWriter, r *http.Request) {
 	os.Remove(infoFile)
 	os.Remove(datFile)
 
+}
+
+func head(w http.ResponseWriter, r *http.Request) {
+	uuid := strings.Split(r.URL.EscapedPath(), "/")[2]
+	fmt.Println("data open:", os.Getenv("STORAGE_ROOT") + "/temp/"+ uuid +".dat")
+	f, e := os.Open(os.Getenv("STORAGE_ROOT") + "/temp/"+ uuid +".dat")
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	defer f.Close()
+	info, e := f.Stat()
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("content-length", fmt.Sprintf("%d", info.Size()))
+}
+
+func get(w http.ResponseWriter, r *http.Request) {
+	uuid := strings.Split(r.URL.EscapedPath(), "/")[2]
+	f, e := os.Open(os.Getenv("STORAGE_ROOT") + "/temp/" + uuid +".dat")
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	defer f.Close()
+	io.Copy(w, f)
 }

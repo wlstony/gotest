@@ -43,7 +43,6 @@ func Locate(name string) (locateInfo map[int]string) {
 		q.Close()
 	}()
 	locateInfo = make(map[int]string)
-	fmt.Println("api locate locateInfo:", locateInfo)
 	for i:=0; i< constant.AllShards; i++  {
 		msg := <-c
 		fmt.Println("msg:", string( msg.Body))
@@ -57,8 +56,6 @@ func Locate(name string) (locateInfo map[int]string) {
 		}
 		locateInfo[info.Id] = info.Addr
 	}
-	fmt.Println("api locate locateInfo:", locateInfo)
-
 	return
 }
 func Exist(name string) bool {
