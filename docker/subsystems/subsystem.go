@@ -13,6 +13,6 @@ type Subsystem interface {
 }
 var (
 	SubsystemsIns = []Subsystem{
-		&cpus
+		&
 	}
 )

@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	sync.Map{}
 	wg := &sync.WaitGroup{}
 	ch1 := make(chan string)
 	ch2 := make(chan string)
