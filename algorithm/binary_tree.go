@@ -13,12 +13,17 @@ type Tree struct {
 
 func main() {
 	head := makeTree()
+	fmt.Println("preOutput")
 	preOutput(head)
 	fmt.Println()
 	preOutput1(head)
 	fmt.Println()
+	fmt.Println("midOutput")
 	midOutput(head)
 	fmt.Println()
+	midOutput1(head)
+	fmt.Println()
+	fmt.Println("postOutput")
 	postOutput(head)
 
 }
@@ -59,8 +64,17 @@ func midOutput(node *Tree)  {
 	midOutput(node.right)
 
 }
-func midOutput1( node *Tree)  {
-
+func midOutput1(node *Tree)  {
+	stack := tools.NewStack()
+	stack.Push(node)
+	tmp := node.left
+	for  {
+		tmp = tmp.left
+		if tmp == nil {
+			break
+		}
+		stack.Push(tmp)
+	}
 }
 func postOutput(node *Tree)  {
 	if node == nil {
