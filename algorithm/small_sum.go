@@ -27,7 +27,6 @@ func smallSum(input *[]int, left, right int) int {
 
 
 func mergeSum(input *[]int, left, mid, right int) int {
-
 	sum := 0
 	l := left
 	r := mid + 1
