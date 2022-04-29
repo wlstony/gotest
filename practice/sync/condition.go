@@ -16,7 +16,7 @@ func main() {
 	for i := 0; i < 10; i++ {
 		go listen(c, i)
 	}
-	time.Sleep(1 * time.Second)
+	time.Sleep(60 * time.Second)
 	go broadcast(c)
 
 	ch := make(chan os.Signal, 1)
@@ -43,6 +43,7 @@ func listen(c *sync.Cond, i int) {
 	fmt.Println("listen lock ", i)
 
 	for atomic.LoadInt64(&status) != 1 {
+		fmt.Println("wait", i)
 		c.Wait()
 	}
 	fmt.Println("listen:", i)
