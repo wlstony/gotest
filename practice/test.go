@@ -2,28 +2,37 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
+	"strconv"
+	"syscall"
 )
 
-type T struct {
-	x int
-	y *[1<<23]byte
+func CheckPID(pid string) (exist bool, err error) {
+	pidInt, err := strconv.Atoi(pid)
+	if err != nil {
+		return
+	}
+
+	err = syscall.Kill(pidInt, 0)
+	if err != nil {
+		return
+	}
+
+	exist = true
+	return
+}
+func alwaysFalse() bool {
+	return false
 }
 
 func main() {
-	t := T{y: new([1<<23]byte)}
-	p := uintptr(unsafe.Pointer(&t.y[0]))
+	c := ConfigOne{}
+	fmt.Println(&c)
+}
 
-	//... // use T.x and T.y
+type ConfigOne struct {
+	Daemon string
+}
 
-	// A smart compiler can detect that the value
-	// t.y will never be used again and think the
-	// memory block hosting t.y can be collected now.
-
-	// Using *(*byte)(unsafe.Pointer(p))) is
-	// dangerous here.
-
-	// Continue using value t, but only use its x field.
-	println(t.x)
-	fmt.Println(p)
+func (c *ConfigOne) String() string  {
+	return fmt.Sprintf("%v", c)
 }

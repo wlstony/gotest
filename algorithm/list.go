@@ -29,20 +29,23 @@ func main() {
 	//input2 := sliceToSNode([]int{1, 2, 3, 4, 5, 6, 7, 8, 9})
 	//outPutSame(input1, input2)
 	//-----------------
-	bl, node := isReverse(sliceToSNode([]int{1, 2, 3, 2, 1}))
-	fmt.Println(bl)
-	outputSNode(node)
-
-	bl, node = isReverse(sliceToSNode([]int{1, 2, 3, 3, 2, 1}))
-	fmt.Println(bl)
-	outputSNode(node)
-
-	bl, node = isReverse(sliceToSNode([]int{1, 2, 3, 3, 5, 1}))
-	fmt.Println(bl)
-	outputSNode(node)
+	//bl, node := isPalindrome(sliceToSNode([]int{1, 2, 3, 2, 1}))
+	//fmt.Println(bl)
+	//outputSNode(node)
+	//
+	//bl, node = isPalindrome(sliceToSNode([]int{1, 2, 3, 3, 2, 1}))
+	//fmt.Println(bl)
+	//outputSNode(node)
+	//
+	//bl, node = isPalindrome(sliceToSNode([]int{1, 2, 3, 3, 5, 1}))
+	//fmt.Println(bl)
+	//outputSNode(node)
+	//-----------------
 }
-
-func isReverse(node *SNode) (bool, *SNode) {
+func () *s {
+	
+}
+func isPalindrome(node *SNode) (bool, *SNode) {
 	slow, fast := node, node
 	for {
 		if fast == nil || fast.Next == nil {
